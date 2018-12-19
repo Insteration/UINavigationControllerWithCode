@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     @objc func perfmormDisplaySecondVC(param: Any) {
-//        let secondVC = SecondViewController()
+        let secondVC = SecondViewController()
         self.view.addSubview(self.button)
     }
 
