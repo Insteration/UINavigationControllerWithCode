@@ -20,8 +20,7 @@ class ViewController: UIViewController {
         self.button.sizeToFit()
         self.button.center = self.view.center
         self.button.addTarget(self, action: #selector(perfmormDisplaySecondVC(param: )), for: .touchUpInside)
-        
-        
+        self.button.addSubview(self.button)
     }
 
     @objc func perfmormDisplaySecondVC(param: Any) {
