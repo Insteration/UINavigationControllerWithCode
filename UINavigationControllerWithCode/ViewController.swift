@@ -19,13 +19,13 @@ class ViewController: UIViewController {
         self.button = UIButton(type: .system)
         self.button.sizeToFit()
         self.button.center = self.view.center
-        self.button.addTarget(self, action: #selector(perfmormDisplaySecondVC()), for: .touchUpInside)
+        self.button.addTarget(self, action: #selector(perfmormDisplaySecondVC(param: )), for: .touchUpInside)
         
         
     }
 
-    @objc func perfmormDisplaySecondVC() {
-        let secondVC = SecondViewController()
+    @objc func perfmormDisplaySecondVC(param: Any) {
+//        let secondVC = SecondViewController()
         self.view.addSubview(self.button)
     }
 
