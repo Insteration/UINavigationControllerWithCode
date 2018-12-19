@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var button = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "First ViewController"
+        self.button = UIButton(type: .system)
+//        self.button.titleLabel(
+//        self.button.sizeToFit()
+        
+        
     }
 
 
