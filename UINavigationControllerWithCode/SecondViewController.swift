@@ -22,7 +22,17 @@ class SecondViewController: UIViewController {
     }
     
     @objc func goBack(param: Any) {
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+        // мы создали массив контроллеров, которые у нас могут быть (в данном случае два контроллера 0 и 1)
+        // POP
+        var currentControllerArray = self.navigationController?.viewControllers
+        // удаляем последний контроллер
+        currentControllerArray?.removeLast()
+        guard let newController = currentControllerArray else {
+            return
+        }
+        self.navigationController?.viewControllers = newController
+        // мы создали массив контроллеров, выбили последний и текущий контроллер массивов мы внесли в массив и нью контроллер засунули в навигейшн контроллер
     }
     
     
