@@ -15,13 +15,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "First ViewController"
+        self.button.setTitle("Second VC", for: .normal)
         self.button = UIButton(type: .system)
-//        self.button.titleLabel(
-//        self.button.sizeToFit()
+        self.button.sizeToFit()
+        self.button.center = self.view.center
+        self.button.addTarget(self, action: #selector(perfmormDisplaySecondVC()), for: .touchUpInside)
         
         
     }
 
+    @objc func perfmormDisplaySecondVC() {
+        let secondVC = SecondViewController()
+        self.view.addSubview(self.button)
+    }
 
 }
 
